@@ -1,9 +1,6 @@
-import {useApplicationContext} from "../../context/ApplicationContext";
 import {Link} from "react-router-dom";
 
 const Sidebar = () => {
-
-    const {userId} = useApplicationContext();
 
     return (
         <>
@@ -21,6 +18,8 @@ const Sidebar = () => {
                                 <i className="bi-clock"></i>
                                 <span>Home</span>
                             </Link>
+                        </li>
+                        <li>
                             <Link to="/questions" className="nav-link">
                                 <i className="bi-clock"></i>
                                 <span>Questions</span>
@@ -52,6 +51,13 @@ const Sidebar = () => {
                                     </li>
                                 </ul>
                             </div>
+                        </li>
+
+                        <li>
+                            <Link to="/logout" className="nav-link">
+                                <i className="bi bi-box-arrow-right"></i>
+                                <span>Logout</span>
+                            </Link>
                         </li>
 
                     </ul>
