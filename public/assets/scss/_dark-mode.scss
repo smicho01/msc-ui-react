@@ -1,0 +1,960 @@
+/*---------- dark-mode ----------*/
+
+body.dark-mode {
+    background-color: $body-bg-dark;
+    color: $grey;
+}
+
+.dark-mode section.bg-white {
+    background-color: $black !important;
+}
+
+.dark-mode .bg-light {
+    background-color: $dark !important;
+}
+
+.dark-mode .border-light {
+    border-color: $dark !important;
+}
+
+.dark-mode .hide-dark-mode {
+    display: none !important;
+}
+
+.dark-mode .hide-light-mode {
+    display: block !important;
+}
+
+.dark-mode .hide-light-mode.d-ib {
+    display: inline-block !important;
+}
+
+.dark-mode .hide-light-mode.d-in {
+    display: inline !important;
+}
+
+.dark-mode .hide-light-mode.d-fx {
+    display: flex !important;
+}
+
+.dark-mode .hide-light-mode.d-if {
+    display: inline-flex !important;
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 {
+    color: $white;
+}
+
+.dark-mode a, .dark-mode a:focus  {
+    color: $grey;
+}
+
+.dark-mode a:hover {
+    color: $white;
+    opacity: 1;
+}
+
+.dark-mode p a, .dark-mode p a:focus  {
+    color: $primary;
+}
+
+.dark-mode p a:hover, .dark-mode .tab-content a:hover, .dark-mode .ui-card a:hover {
+    color: $white;
+    opacity: 1;
+}
+
+.dark-mode .bg-primary a, .dark-mode .bg-primary a:focus, .dark-mode.bg-primary a, .dark-mode.bg-primary a:focus  {
+    color: $grey;
+    opacity: 1;
+}
+
+.dark-mode .bg-primary a:hover, .dark-mode.bg-primary a:hover {
+    color: $white;
+    opacity: 1;
+}
+
+.dark-mode a.btn, .dark-mode .btn:hover, .dark-mode .btn-social:hover {
+    opacity: 1;
+}
+
+.dark-mode .btn-outline-highlight, .dark-mode .btn-outline-highlight:focus {
+    color: $highlight-white !important;
+    background-color: transparent !important;
+    border-color: $highlight-white !important;
+}
+
+.dark-mode .btn-outline-highlight:hover, .dark-mode .btn-outline-highlight.active {
+    color: $white !important;
+    background-color: $highlight-white !important;
+    border-color: transparent !important;
+}
+
+.dark-mode .btn-gradient-highlight, .dark-mode .btn-gradient-highlight:focus {
+    color: $white !important;
+    background: $highlight-white-gradient !important;
+    border-color: transparent !important;
+}
+
+.dark-mode [class*="btn-gradient"]:hover {
+    opacity: 0.75;
+}
+
+.dark-mode .title-color {
+    color: $white !important;
+}
+
+.dark-mode .text-link, .dark-mode .text-link:focus {
+    color: $grey;
+    opacity: 1;
+}
+
+.dark-mode .text-link:hover {
+    color: $white;
+    opacity: 1;
+}
+
+.dark-mode .title-link, .dark-mode .title-link:focus {
+    color: $grey;
+}
+
+.dark-mode .title-link:hover {
+    color: $white;
+}
+
+.dark-mode p {
+    color: $grey;
+}
+
+.dark-mode li {
+    color: $grey;
+}
+
+.dark-mode .section-sub-title {
+    color: $white;
+}
+
+.dark-mode .nav a, .dark-mode .pagination .active a, .dark-mode .navbar-brand {
+    opacity: 1 !important;
+}
+
+.dark-mode .btn-highlight, .navbar-inverse .btn-highlight, .bg-inverse .btn-highlight, .bg-dark .btn-highlight, .bg-black .btn-highlight {
+    color: $white !important;
+    background-color: $highlight-white !important;
+    border-color: transparent !important;
+}
+
+.dark-mode .btn-highlight:hover, .navbar-inverse .btn-highlight:hover, .bg-inverse .btn-highlight:hover, .bg-dark .btn-highlight:hover, .bg-black .btn-highlight:hover {
+    color: $white !important;
+    background-color: $highlight-white-dark !important;
+    border-color: transparent !important;
+}
+
+.dark-mode .dark-mode-btn {
+    display: none;
+}
+
+.dark-mode .light-mode-btn {
+    display: block;
+}
+
+.dark-mode .navbar-light.bg-white, .dark-mode .navbar-light.bg-light {
+    background-color: $inverse-color !important;
+}
+
+.dark-mode .navbar-light .nav-link, .dark-mode .navbar-light .nav-link:focus {
+    color: $grey !important;
+}
+
+.dark-mode .navbar-light .nav-link:hover, .dark-mode .navbar-light .nav-link.active {
+    color: $primary !important;
+}
+
+.dark-mode .menu-pills .nav-link:hover, .dark-mode .menu-pills .nav-link.active {
+    color: $white !important;
+}
+
+.dark-mode .bg-primary .nav-link, .dark-mode .bg-primary .nav-link:focus {
+    color: $grey !important;
+}
+
+.dark-mode .bg-primary .nav-link:hover, .dark-mode .bg-primary .nav-link.active {
+    color: $white !important;
+}
+
+
+.dark-mode .navbar-toggler .icon-bar {
+  background-color: $light-grey;
+}
+
+.dark-mode .pagination a {
+    color: $white;
+    opacity: 0.75;
+}
+
+.dark-mode .pagination a:hover {
+    opacity: 1;
+}
+
+.dark-mode .breadcrumb.bg-white {
+    background-color: $black !important;
+}
+
+.dark-mode .breadcrumb-item {
+    color: $light-grey;
+}
+
+.dark-mode .breadcrumb-item:hover {
+    opacity: 1;
+    color: $grey;
+}
+
+.dark-mode .breadcrumb-item::before {
+    color: $grey !important;
+}
+
+.dark-mode .breadcrumb-item.active {
+    color: $grey;
+}
+
+.dark-mode .breadcrumb-item.active:hover {
+    color: $grey;
+}
+
+.dark-mode .list-group-item {
+    background-color: $inverse-color;
+    border-color: $dark-grey-dark;
+}
+
+.dark-mode .list-group-item-action:focus, .dark-mode .list-group-item-action:hover {
+    color: $white;
+    background-color: $highlight-white;
+}
+
+.dark-mode .list-group-item.active, .dark-mode .list-group-item.active:hover {
+    color: $white;
+    background-color: $primary;
+    border-color: $primary;
+}
+
+.dark-mode table {
+    background: $black;
+    border-color: $dark !important;
+}
+
+.dark-mode .table thead th {
+    border-bottom: 1px solid $dark !important;
+    background-color: $inverse-color;
+}
+
+.dark-mode .table .thead-light {
+    color: $white;
+    background-color: $dark;
+}
+
+.dark-mode .table td, .dark-mode .table th {
+    border-right-color: $dark !important;
+}
+
+.dark-mode .table tr {
+    border-color: $dark;
+    color: $grey;
+}
+
+.dark-mode .thead-default th {
+    color: $white;
+    background-color: $dark;
+}
+
+.dark-mode .table-striped tbody tr:nth-of-type(odd) {
+    background-color: $inverse-color;
+}
+
+.dark-mode .table-striped tbody tr:nth-of-type(odd) th, .dark-mode .table-striped tbody tr:nth-of-type(odd) td {
+    color: $grey;
+    border-color: $dark !important;
+}
+
+.dark-mode .table-bordered td, .dark-mode .table-bordered th {
+    border-color: $dark;
+}
+
+.dark-mode .table-active,.table-active>td, .dark-mode .table-active>th {
+    background-color: $dark;
+}
+
+.dark-mode .nav-pills .nav-link {
+    color: $grey;
+    background-color: $highlight-white;
+}
+
+.dark-mode .nav-pills .nav-link:hover {
+    color: $primary !important;
+    background-color: $primary-light;
+}
+
+.dark-mode .nav-pills .nav-link.active, .dark-mode .nav-pills .nav-link.active:hover {
+    color: $white !important;
+    background-color: $primary;
+}
+
+.dark-mode .toast {
+    background: $black;
+}
+
+.dark-mode .toast-header {
+    color: $white;
+    border-bottom: $dark;
+}
+
+.dark-mode .toast-header small {
+    color: $light-grey-dark;
+}
+
+.dark-mode .toast .btn-close {
+    color: $white;
+}
+
+.dark-mode .toast-body p {
+    color: $light-grey;
+}
+
+.dark-mode .popover {
+    background-color: $inverse-color;
+    color: $grey;
+}
+
+.dark-mode .popover * {
+    color: $white;
+    opacity: 0.75;
+}
+
+.dark-mode .popover-header {
+    color: $white !important;
+    opacity: 1;
+}
+
+.dark-mode .bs-popover-top .popover-arrow:after, .dark-mode .bs-popover-top .popover-arrow:before {
+    border-top-color: $inverse-color;
+}
+
+.dark-mode .bs-popover-bottom .popover-arrow:after, .dark-mode .bs-popover-bottom .popover-arrow:before {
+    border-bottom-color: $inverse-color;
+}
+
+.dark-mode .bs-popover-start .popover-arrow:after, .dark-mode .bs-popover-start .popover-arrow:before {
+    border-left-color: $inverse-color;
+}
+
+.dark-mode .bs-popover-end .popover-arrow:after, .dark-mode .bs-popover-end .popover-arrow:before {
+    border-right-color: $inverse-color;
+}
+
+.dark-mode .form-control {
+    color: $grey;
+    background: transparent;
+    border-color: $dark-grey-dark;
+}
+
+.dark-mode .form-control:focus, .dark-mode input:focus, .dark-mode textarea:focus, .dark-mode .custom-select:focus, .dark-mode .multiple-selector:focus {
+    color: $grey !important;
+    outline: none !important;
+    background-color: transparent;
+    border-color: $primary !important;
+}
+
+.dark-mode .custom-select {
+    color: $grey;
+    border-color: $dark-grey-dark;
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/8px 10px
+}
+
+.dark-mode .needs-validation .form-control:focus, .dark-mode .needs-validation .form-control:active {
+    border-color: $primary !important;
+}
+
+.dark-mode .btn-file input[type=file] {
+    color: $white;
+    background: $inverse-color;
+}
+
+.dark-mode .form-control.w-icon-left {
+    border-color: $dark-grey-dark;
+}
+
+.dark-mode .input-group-text {
+    color: $grey;
+    background: $inverse-color;
+    border-color: $dark-grey-dark;
+}
+
+.dark-mode .input-group-addon {
+    color: $grey;
+    background-color: $dark-grey-dark;
+    border-color: $dark-grey-dark;
+}
+
+.dark-mode .form-control.is-valid, .dark-mode .was-validated .form-control:valid {
+    border-color: $success !important;
+}
+
+.dark-mode .form-control.is-invalid, .dark-mode .was-validated .form-control:invalid {
+    border-color: $danger !important;
+}
+
+.dark-mode .onoffswitch-switch, .dark-mode .onoffswitch2-switch {
+    background: $dark;
+}
+
+.dark-mode .onoffswitch-inner:after, .dark-mode .onoffswitch2-inner:after {
+    background: $highlight-white-dark;
+}
+
+.dark-mode .onoffswitch-inner:before {
+    background: $highlight-white;
+}
+
+.dark-mode ::-webkit-input-placeholder {
+    color: $secondary !important;
+}
+
+.dark-mode ::-moz-placeholder {
+    color: $secondary !important;
+}
+
+.dark-mode :-moz-placeholder {
+    color: $secondary !important;
+}
+
+.dark-mode :-ms-input-placeholder {
+    color: $secondary !important;
+}
+
+.dark-mode .checkbox label::before {
+    border-color: $dark-grey-dark;
+    background-color: transparent;
+}
+
+.dark-mode .checkbox label::after {
+    color: $secondary;
+}
+
+.dark-mode .checkbox input[type="checkbox"]:disabled + label::before {
+    background-color: $dark-grey-dark;
+    border-color: $dark-grey-dark;
+}
+
+.dark-mode .radio label::before {
+    border: 2px solid $dark-grey-dark;
+    background-color: transparent;
+}
+
+.dark-mode .radio label::after {
+    background-color: $secondary;
+}
+
+.dark-mode .form-wrapper {
+    background: $inverse-color;
+    border-color: $dark-grey-dark;
+}
+
+.dark-mode #loader-wrapper .loader-section {
+  background: $body-bg-dark;
+}
+
+.dark-mode .progress {
+    background-color: $inverse-color;
+}
+
+.dark-mode .card .progress, .dark-mode .promo-box .progress {
+    background-color: $black;
+}
+
+.dark-mode .noUi-handle {
+    background-color: $inverse-color;
+}
+
+.dark-mode .noUi-target {
+    background-color: $black;
+}
+
+.dark-mode .card {
+    background-color: $inverse-color;
+    border-color: $dark;
+}
+
+.dark-mode .demo-item-link .card-title {
+    color: $white;
+}
+
+.dark-mode .demo-item-link:hover .card-title {
+    color: $primary;
+}
+
+.dark-mode .card-drop i {
+    color: $grey;
+}
+
+.dark-mode .card-header {
+    border-bottom-color: $dark;
+}
+
+.dark-mode .card-footer {
+    border-top-ccolor: $dark;
+}
+
+.dark-mode .card-header, .dark-mode .card-footer {
+    background: $black;
+}
+
+.dark-mode .card-sub-title {
+    color: $secondary;
+}
+
+.dark-mode .modal-backdrop {
+    background-color: $inverse-transparent-frosted;
+}
+
+.dark-mode .modal-content {
+    background-color: $black;
+}
+
+.dark-mode .modal-fs .modal-close {
+    color: $white;
+    border-color: $white;
+}
+
+.dark-mode .modal-fs .modal-close:hover {
+    color: $white;
+    background-color: transparent;
+}
+
+.dark-mode .swiper-pagination-bullet {
+    background-color: $secondary;
+}
+
+.dark-mode .swiper-pagination-bullet.active {
+    background-color: $primary;
+}
+
+.dark-mode .swiper-pagination-bullet-active {
+    background-color: white;
+}
+
+.dark-mode .swiper-horizontal.pagination-down > .swiper-pagination-bullets .swiper-pagination-bullet-active {
+    background-color: $primary;
+}
+
+.dark-mode .accordion {
+    background: $inverse-color;
+}
+
+.dark-mode .accordion-button {
+    color: $white;
+    border-color: $dark;
+}
+
+.dark-mode .accordion-item .accordion-button:focus {
+    border-color: $dark;
+}
+
+.dark-mode .accordion-button.collapsed i {
+    color: $white;
+}
+
+.dark-mode .accordion-collapse {
+    border-color: $dark;
+}
+
+.dark-mode .minimal-accordion .accordion-button span {
+    background: $dark;
+}
+
+.dark-mode .accordion .card {
+    background: $inverse-color;
+}
+
+.dark-mode .accordion .card-body {
+    color: $grey;
+    border-top-color: $dark;
+}
+
+.dark-mode .dropdown-menu {
+    background-color: $black;
+}
+
+.dark-mode .dropdown-divider {
+    border-color: $dark-grey;
+}
+
+.dark-mode .dropdown-item i {
+    color: $grey;
+}
+
+.dark-mode .dropdown-item:hover i, .dark-mode .dropdown-item:hover {
+    color: $primary;
+}
+
+.dark-mode .bg-primary .dropdown-item:hover i, .dark-mode .bg-primary .dropdown-item:hover {
+    color: $white;
+}
+
+.dark-mode .promo-box {
+    background-color: $inverse-color;
+    border-color: $dark;
+}
+
+.dark-mode .promo-box.has-process-icon:after, .dark-mode .promo-box.dark.has-process-icon:after {
+    color: rgba(25,25,25,0.75);
+}
+
+.dark-mode .promo-box .col-line-bottom {
+    border-bottom-color: $dark;
+}
+
+.dark-mode .promo-box .col-line {
+    border-right-color: $dark;
+}
+
+.dark-mode .widget {
+    background-color: $black;
+    border-color: $dark;
+}
+
+.dark-mode .footer-widget-area {
+    border-color: rgba(55,55,55,0.5)
+}
+
+.dark-mode .footer-widget-area .widget, .footer-widget-area.dark .widget {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.dark-mode .comment-reply, .dark-mode .comment-reply:focus, .dark-mode .comment-reply:hover {
+    color: $white;
+    opacity: 0.75;
+}
+
+.dark-mode .comment-reply:hover {
+    opacity: 1;
+}
+
+.dark-mode .timeline:before {
+    background-color: $black-transparent-50;
+}
+
+.dark-mode .timeline.w-icons:before {
+    background-color: $black-transparent-50;
+}
+
+.dark-mode .timeline > li > .timeline-badge {
+    border-color: $black;
+}
+
+.dark-mode .timeline > li > .timeline-panel {
+    background-color: $black;
+}
+
+.dark-mode .menu-list a {
+    color: $grey;
+    opacity: 1;
+}
+
+.dark-mode .menu-list a:hover {
+    color: $white;
+    opacity: 1;
+}
+
+.dark-mode .filter-title {
+    color: $white;
+}
+
+.dark-mode .filter-btn {
+    color: $white;
+}
+
+.dark-mode .filter-btn:hover {
+    color: $primary;
+}
+
+.dark-mode .filter-btn.is-checked {
+    color: $primary;
+}
+
+.dark-mode .filter-btn.is-checked:hover {
+    color: $primary;
+}
+
+.dark-mode .hovereffect-title .hover-bottom  {
+    background-color: $dark;
+}
+
+.dark-mode .hovereffect-title .project-title {
+    color: $white;
+}
+
+.dark-mode .hovereffect-title .project-title:hover {
+    color: $primary;
+}
+
+.dark-mode .comment-author {
+    color: $white;
+}
+
+.dark-mode .glightbox-clean .gslide-description {
+    background-color: $black;
+}
+
+.dark-mode .glightbox-clean .gslide-title {
+    color: $white;
+}
+
+.dark-mode .glightbox-clean .gslide-desc {
+    color: $secondary;
+}
+
+.dark-mode .hovereffect-title .hover-bottom a {
+    color: $white;
+    opacity: 1;
+}
+
+.dark-mode .hovereffect-title .hover-bottom a:hover {
+    color: $primary;
+}
+
+.dark-mode .product-price {
+    background-color: $inverse-color;
+}
+
+.dark-mode .product-price.w-del del {
+    border-color: $dark;
+}
+
+.dark-mode .mega-menu .sub-menu {
+    border-color: $dark;
+}
+
+.dark-mode form label {
+    color: $grey;
+}
+
+.dark-mode .wishlist-list li {
+    border-color: $dark;
+}
+
+.dark-mode .nav-tabs .nav-link {
+    color: $grey;
+}
+
+.dark-mode .nav-tabs .nav-link:hover {
+    color: $white;
+}
+
+.dark-mode .nav-tabs.product-tabs .nav-link:hover {
+    border-color: $white !important;
+}
+
+.dark-mode .nav-tabs.product-tabs .nav-link.active:hover {
+    border-color: $primary !important;
+}
+
+.dark-mode .nav-tabs .nav-link.active {
+    color: $primary;
+    border-color: $primary;
+}
+
+.dark-mode .shipping-info, .dark-mode .order-info {
+    border-color: $dark;
+}
+
+.dark-mode .shipping-options {
+    background-color: $body-bg-dark;
+    border-color: $dark;
+}
+
+.dark-mode .accepted-cards {
+    background-color: $body-bg-dark;
+    border-color: $dark;
+}
+
+.dark-mode .accepted-cards-text {
+    color: $white;
+}
+
+.dark-mode .order-list li {
+    border-color: $dark;
+}
+
+.dark-mode .spacer {
+    border-color: $dark;
+}
+
+.dark-mode .hovereffect-title.project-icons a {
+    opacity: 1 !important;
+    background-color: $white;
+    color: $black;
+}
+
+.dark-mode .hovereffect-title.project-icons a:hover {
+    background-color: $dark !important;
+    color: $white;
+}
+
+.dark-mode .hovereffect .overlay {
+    background: $inverse-transparent-frosted;
+}
+
+.dark-mode .bg-light {
+    background-color: $dark-grey !important;
+}
+
+.dark-mode .bg-highlight {
+    background-color: $highlight !important;
+}
+
+.dark-mode .bg-highlight-dark {
+    background-color: $highlight-dark !important;
+}
+
+.dark-mode .side-navbar {
+    background: $inverse-color !important;
+    border-right: 1px solid $highlight-white-dark;
+    box-shadow: none;
+}
+
+.dark-mode .nav-ui {
+    border-bottom: 1px solid $highlight-white-dark;
+}
+
+.dark-mode .side-navbar .nav-link {
+    color: $grey;
+}
+
+.dark-mode .side-navbar .sidenav-title, .dark-mode .side-navbar .sidenav-sub-item.sub-title {
+    color: $dark-grey;
+}
+
+.dark-mode .side-navbar.nav-inverse .nav-link.has-collapse:after {
+    color: $white;
+}
+
+.dark-mode .side-navbar .nav-link.has-collapse, .dark-mode .side-navbar.nav-inverse .nav-link.has-collapse:hover {
+    color: $white !important;
+    background-color: $primary;
+}
+
+.dark-mode .side-navbar .nav-link.has-collapse.collapsed:hover:after {
+    color: $primary !important;
+}
+
+.dark-mode .side-navbar .nav-link.has-collapse.collapsed {
+    color: $grey !important;
+    background-color: transparent;
+}
+
+.dark-mode .side-navbar .nav-link.has-collapse.collapsed:hover {
+    color: $primary !important;
+    background-color: $primary-light;
+}
+
+.dark-mode .side-navbar.nav-primary .nav-link.has-collapse, .dark-mode .side-navbar.nav-primary .nav-link.has-collapse:hover {
+    color: $white !important;
+    background-color: $highlight-white-dark;
+}
+
+.dark-mode .side-navbar .nav-link.sidenav-sub-item.active, .dark-mode .side-navbar .nav-link.sidenav-sub-item.active:hover {
+    color: $white !important;
+    background-color: $highlight-white-dark;
+}
+
+.dark-mode .side-navbar .nav-link.sidenav-sub-item:hover {
+    color: $grey !important;
+    background-color: $highlight-white;
+}
+
+.dark-mode .side-navbar .nav-link.active, .dark-mode .side-navbar .nav-link.has-collapse, .dark-mode .side-navbar .nav-link.has-collapse.collapsed:hover, .dark-mode .side-navbar .nav-link.has-collapse:after, .dark-mode .side-navbar .nav-link.has-collapse:hover:after {
+    color: $white;
+    opacity: 1;
+}
+
+.dark-mode .side-navbar .nav-link.has-collapse.collapsed:after {
+    color: $grey !important;
+}
+
+.dark-mode .comp-sidenav .nav-link {
+    color: $grey-dark;
+}
+
+.dark-mode .comp-sidenav .nav-link:hover, .dark-mode .comp-sidenav .nav-link.active {
+    color: $white;
+    background-color: $highlight-white;
+}
+
+.dark-mode :not(pre)>code[class*="language-"],
+.dark-mode pre[class*="language-"] {
+    background: $black;
+}
+
+.dark-mode .token.boolean, .dark-mode .token.number {
+    color: $warning-light;
+}
+
+.dark-mode .token.keyword {
+    color: $success-light;
+}
+
+.dark-mode .token.property,
+.dark-mode .token.tag,
+.dark-mode .token.constant,
+.dark-mode .token.symbol,
+.dark-mode .token.deleted {
+    color: $primary-light;
+}
+
+.dark-mode .token.punctuation {
+    color: $primary-light;
+}
+
+.dark-mode code[class*="language-"],
+.dark-mode pre[class*="language-"] {
+    color: $light-grey;
+}
+
+.dark-mode .token.atrule,
+.dark-mode .token.attr-value,
+.dark-mode .token.function {
+    color: $danger-light;
+}
+
+.dark-mode .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.dark-mode .offcanvas {
+    background-color: $black !important;
+}
+
+.dark-mode .token.selector, .dark-mode .token.attr-name, .dark-mode .token.string, .dark-mode .token.char, .dark-mode .token.builtin, .dark-mode .token.inserted {
+    color: $info-light;
+}
+
+.dark-mode .ui-card {
+    background-color: transparent;
+    border-color: $highlight-white;
+}
+
+.dark-mode .bordered-tabs {
+    border-bottom-color: $highlight-white;
+}
+
+.dark-mode .bordered-tabs .nav-link {
+    color: $grey-dark;
+}
+
+.dark-mode .bordered-tabs .nav-link.active, .dark-mode .bordered-tabs .nav-link:hover {
+    color: $white;
+}
+
+.dark-mode .swiper-grayscale img {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+/*---------- end of dark-mode ----------*/

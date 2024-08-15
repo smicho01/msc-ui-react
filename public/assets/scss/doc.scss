@@ -1,0 +1,1202 @@
+@import "variables";
+@import "mixins";
+
+/*---------- documentation styles ----------*/
+
+/*------- general -------*/
+
+.doc-white-body {
+    background-color: $white;
+}
+
+.doc-preview {
+    background-color: $white;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: $shadow !important;
+}
+
+.doc-preview img {
+    border: 1px solid $highlight;
+}
+
+.doc-info {
+    background-color: $white;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: $shadow !important;
+}
+
+.icon-item-inner {
+    display: inline-block;
+}
+
+.icon-item-inner  .icon-wrapper {
+    background: $white;
+    padding: 30px;
+    margin: 5px;
+    width: 120px;
+    text-align: center;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.05) !important;
+}
+
+.icon-item-inner .icon-wrapper i {
+    color: $text-color;
+    font-size: 30px;
+    transition: all 0.2s ease-in-out;
+}
+
+.icon-item-inner .icon-wrapper i.bi {
+    line-height: 100%;
+}
+
+
+.icon-item-inner:hover .icon-wrapper {
+    background: $light-grey;
+}
+
+.icon-item-inner:hover i {
+    color: $primary;
+}
+
+.icon-item-inner .caption-sm {
+    color: $title-color;
+    font-size: 10px;
+    font-weight: $medium;
+    text-align: center;
+    margin-top: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.icon-item-inner:hover .caption-sm {
+    color: $primary;
+}
+
+/*--- nav-doc ---*/
+
+.nav-doc {
+    position: fixed;
+    top: 0;
+    left: 280px;
+    right: 0;
+    z-index: 1001;
+    height: 74px;
+    transition: none !important;
+    border-bottom: 1px solid $highlight;
+    box-shadow: $shadow;
+}
+
+.nav-doc.navbar-light {
+    background: $white !important;
+}
+
+.nav-doc.navbar-inverse {
+    background: $inverse-color !important;
+    border-color: $highlight-white-dark;
+}
+
+.nav-doc.navbar-inverse.nav-primary {
+    background: $primary !important;
+}
+
+.nav-doc .navbar-nav {
+    flex-direction: row
+}
+
+.nav-doc .navbar-toggler {
+    padding: 0
+}
+
+.nav-doc .nav-link {
+    opacity: 1;
+    height: 74px;
+    line-height: 74px;
+    margin: 0;
+    padding: 0 1rem !important
+}
+
+.nav-doc .nav-icons .nav-item {
+    position: relative
+}
+
+.nav-doc .nav-link.first-link {
+    padding-left: 0 !important
+}
+
+.nav-doc .nav-icon i {
+    font-size: 1.25rem
+}
+
+.nav-doc .bi-list {
+    font-size: 34px !important;
+}
+
+/*--- end of nav-doc ---*/
+
+
+
+/*--- doc-styles ---*/
+
+.doc-side-navbar {
+    background: $white !important;
+    width: 280px;
+    z-index: 1002;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 0;
+    box-shadow: $shadow-lg;
+}
+
+.doc-side-navbar.right-nav {
+    right: 0;
+    border-right: none;
+}
+
+.mobile-nav-toggler .nav-link {
+    color: $title-color;
+}
+
+.mobile-nav-toggler .nav-link:hover {
+    color: $primary;
+}
+
+.doc-side-navbar .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    height: 100% !important;
+}
+
+.doc-side-navbar .nav-item {
+    width: 100%;
+}
+
+.sidenavbar-logo {
+    text-align: left;
+    position: relative;
+    width: 280px !important;
+    height: 74px;
+    line-height: 74px;
+    padding: 0 3rem;
+    margin-bottom: 2rem;
+    z-index: 99;
+    border-bottom: 1px solid $highlight;
+}
+
+.sidenavbar-logo img {
+    width: auto;
+    height: 32px;
+}
+
+.light-nav .main-logo.logo-light {
+    display: none;
+}
+
+.doc-side-navbar .nav-link {
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: left;
+    padding: 0.875rem 1.25rem;
+    margin: 5px 30px;
+    border-radius: $border-radius-sm;
+    opacity: 1;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.doc-side-navbar .nav-link:hover {
+    color: $primary !important;
+    background-color: $primary-light;
+    opacity: 1;
+}
+
+.doc-side-navbar .nav-link.active {
+    color: $white !important;
+    background-color: $primary;
+}
+
+.doc-side-navbar .nav-link.has-collapse.collapsed {
+    opacity: 1;
+}
+
+.doc-side-navbar .nav-link.has-collapse:after {
+    content: "\f282" !important;
+    font-family: 'bootstrap-icons' !important;
+    display: inline-block !important;
+    vertical-align: middle;
+    color: $dark-grey;
+    font-size: 12px;
+    line-height: 150%;
+    float: right;
+    position: relative;
+    top: 0;
+    transition: all 0.2s ease-in-out;
+    transform: rotate(-90deg)
+}
+
+.doc-side-navbar .nav-link.has-collapse:not(.collapsed)::after {
+    transform: rotate(-180deg)
+}
+
+.doc-side-navbar .nav-link, .doc-side-navbar .nav-link.has-collapse.collapsed {
+    opacity: 1;
+    color: $title-color;
+}
+
+.doc-side-navbar .nav-link.has-collapse.collapsed:after {
+    color: $title-color !important;
+}
+
+.doc-side-navbar .nav-link.has-collapse.collapsed:after {
+    opacity: 0.6;
+}
+
+.doc-side-navbar .nav-link.has-collapse.collapsed:hover {
+    opacity: 1;
+    color: $primary !important;
+    background-color: $primary-light;
+}
+
+.doc-side-navbar .nav-link.has-collapse.collapsed:hover:after {
+    color: $primary !important;
+}
+
+.doc-side-navbar .nav-link.has-collapse {
+    color: $white;
+    background-color: $primary;
+}
+
+.doc-side-navbar .nav-link.has-collapse.collapsed {
+    background-color: transparent;
+}
+
+.doc-side-navbar .nav-link.has-collapse:hover, .doc-side-navbar .nav-link.has-collapse:after {
+    color: $white !important;
+}
+
+.doc-side-navbar .nav-link i {
+    font-size: 1rem;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 18px;
+}
+
+.doc-side-navbar .nav-link [class^="bi-"]::before {
+    vertical-align: baseline;
+}
+
+.doc-side-navbar .sidenav-title {
+    font-size: 1rem;
+    font-weight: $medium;
+    text-align: left;
+    padding: 2rem 3.125rem 0.75rem 3.125rem;
+    margin-top: 1rem;
+    border-top: 1px solid $light-grey;
+}
+
+.doc-side-navbar .sidenav-title i {
+    width: 26px;
+    margin-right: 5px;
+}
+
+.doc-side-navbar .sidenav-sub-item {
+    background-color: transparent;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    margin: 2px 30px;
+    margin-left: 50px;
+    border-radius: $border-radius-sm;
+}
+
+.doc-side-navbar .nav-link.sidenav-sub-item.active, .doc-side-navbar .nav-link.sidenav-sub-item.active:hover {
+    color: $title-color !important;
+    background-color: $highlight-dark;
+}
+
+.doc-side-navbar .nav-link.sidenav-sub-item:hover {
+    color: $title-color !important;
+    background-color: $highlight;
+}
+
+.doc-side-navbar.nav-inverse .nav-link.sidenav-sub-item.active, .doc-side-navbar.nav-inverse .nav-link.sidenav-sub-item.active:hover {
+    color: $white !important;
+    background-color: $highlight-white-dark;
+}
+
+.doc-side-navbar.nav-inverse .nav-link.sidenav-sub-item:hover {
+    color: $grey !important;
+    background-color: $highlight-white;
+}
+
+.doc-side-navbar .sidenav-sub-item.sub-title {
+    font-size: 0.75rem;
+    font-weight: $medium;
+    padding: 0.875rem 3rem 0.5rem 3.625rem;
+}
+
+.doc-side-navbar .sidenav-title,
+.doc-side-navbar .sidenav-sub-item.sub-title {
+    color: $title-color;
+}
+
+.doc-side-navbar .sidenav-sub-item.second-level,
+.doc-side-navbar .sidenav-sub-item.sub-title.second-level {
+    padding-left: 5.125rem !important;
+}
+
+.doc-side-navbar .sidenav-sub-item.third-level,
+.doc-side-navbar .sidenav-sub-item.sub-title.third-level {
+    padding-left: 6.375rem !important;
+}
+
+.doc-side-navbar .sidenav-sub-item.fourth-level,
+.doc-side-navbar .sidenav-sub-item.sub-title.fourth-level {
+    padding-left: 7.625rem !important;
+}
+
+.doc-wrapper .page-container {
+    position: relative;
+    min-height: 100vh;
+    padding: 74px 0 0 280px;
+}
+
+.doc-wrapper .page-container.with-right-nav,
+.doc-wrapper .rtl-css .page-container {
+    padding: 74px 280px 0 0;
+}
+
+.doc-wrapper .page-container .container-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.doc-wrapper .page-container .page-title {
+    padding: 30px 0;
+    margin: 0;
+}
+
+.doc-wrapper .page-content .col-xl-9 {
+    min-height: 100vh;
+}
+
+.doc-side-navbar #main-collapse {
+    width: 100%;
+}
+
+.doc-side-navbar.nav-inverse {
+    background: $inverse-color !important;
+    border-right: $highlight-white-dark;
+}
+
+.doc-side-navbar.nav-inverse.nav-primary {
+    background: $primary !important;
+}
+
+.doc-side-navbar.nav-inverse .nav-link, .doc-side-navbar.nav-inverse .nav-link.has-collapse.collapsed {
+    opacity: 1;
+    color: $grey;
+}
+
+.doc-side-navbar.nav-inverse .nav-link.has-collapse.collapsed:after {
+    color: $grey !important;
+}
+
+.doc-side-navbar.nav-inverse .sidenav-title, .doc-side-navbar.nav-inverse .sidenav-sub-item.sub-title {
+    color: $dark-grey;
+    border-top-color: $highlight-white-dark;
+}
+
+.doc-side-navbar .nav-link.sidenav-sub-item i {
+    font-size: 0.875rem;
+    margin-right: 8px;
+}
+
+.doc-side-navbar.nav-inverse .nav-link:hover {
+    color: $white;
+    opacity: 1;
+}
+
+.doc-side-navbar.nav-inverse .nav-link.has-collapse.collapsed {
+    opacity: 1;
+}
+
+.doc-side-navbar.nav-inverse .nav-link.has-collapse:after {
+    color: $white;
+}
+
+.doc-side-navbar.nav-inverse .nav-link.has-collapse:after {
+    color: $white;
+}
+
+.doc-side-navbar.nav-inverse .nav-link.has-collapse, .doc-side-navbar.nav-inverse .nav-link.has-collapse:hover {
+    color: $white !important;
+    background-color: $primary;
+}
+
+.doc-side-navbar.nav-inverse .nav-link.has-collapse.collapsed:hover:after {
+    color: $primary !important;
+}
+
+.doc-side-navbar.nav-inverse .nav-link.has-collapse.collapsed {
+    color: $grey !important;
+    background-color: transparent;
+}
+
+.doc-side-navbar.nav-inverse .nav-link.has-collapse.collapsed:hover {
+    color: $primary !important;
+    background-color: $primary-light;
+}
+
+.doc-side-navbar .nav-link.has-collapse.collapsed:after {
+    opacity: 0.6;
+}
+
+.doc-side-navbar.nav-inverse .nav-link.active,
+.doc-side-navbar.nav-inverse .nav-link.has-collapse,
+.doc-side-navbar.nav-inverse .nav-link.has-collapse.collapsed:hover,
+.doc-side-navbar.nav-inverse .nav-link.has-collapse:after,
+.doc-side-navbar.nav-inverse .nav-link.has-collapse:hover:after {
+    opacity: 1;
+    color: $white;
+}
+
+.doc-side-navbar.nav-inverse .sidenavbar-logo {
+    border-color: $highlight-white-dark;
+}
+
+.doc-wrapper .page-container .navbar {
+    position: fixed;
+    top: 0;
+    left: 280px;
+    right: 0;
+}
+
+.doc-wrapper .page-container .ui-card .navbar {
+    position: relative;
+    left: 0;
+}
+
+.on-page-sidebar {
+    height: 100%;
+    border-left: 1px solid $highlight;
+    border-right: 1px solid $highlight;
+    margin-left: 6px;
+    z-index: 9;
+}
+
+.on-page-title {
+    font-size: 1rem;
+    font-weight: $medium;
+    margin-bottom: 0;
+    padding: 1.5rem 0 1rem 1.5rem;
+    border-bottom: 1px solid $highlight;
+}
+
+.comp-sidenav {
+    z-index: 10;
+}
+
+.comp-sidenav .nav-link {
+    color: $text-color;
+    font-size: 0.875rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0;
+}
+
+.comp-sidenav .nav-link:hover, .comp-sidenav .nav-link.active {
+    color: $title-color;
+    background-color: $highlight;
+}
+
+.ui-card {
+    background-color: transparent;
+    border: 1px solid $highlight;
+    margin-bottom: 30px;
+    padding: 30px;
+    box-shadow: none !important;
+}
+
+.ui-card p.text-muted {
+    font-size: 0.875rem;
+    color: $secondary-dark !important;
+}
+
+/* prism */
+
+:not(pre)>code[class*="language-"],
+pre[class*="language-"] {
+    background: $white;
+}
+
+.preview-code {
+    position: relative;
+}
+
+pre {
+    color: $dark-grey;
+    font-size: 0.875rem;
+    background-color: $white;
+    border-left: 1px solid $primary-light;
+    padding: 15px;
+    white-space: pre-line;
+    border-radius: 5px;
+}
+
+code {
+    font-size: inherit;
+    font-family: inherit;
+    color: $info;
+    word-wrap: break-word;
+}
+
+.btn-copy {
+    font-size: 11px;
+    padding: 0px 20px;
+    min-width: auto;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 34px;
+    line-height: 34px;
+    color: $white;
+    background-color: $primary;
+    border: none;
+    border-radius: 4px !important;
+    box-shadow: none;
+    opacity: 0;
+}
+
+.btn-copy:hover {
+    color: $white;
+    background-color: $primary-dark;
+    border-color: $primary-dark;
+    box-shadow: none !important;
+    opacity: 1;
+}
+
+.btn-copy i:before {
+    vertical-align: middle;
+}
+
+pre:hover .btn-copy {
+    opacity: 1;
+}
+
+pre:hover .btn-copy:hover {
+    opacity: 1;
+}
+
+.btn-copy.btn-left {
+    left: 10px;
+}
+
+pre.language-markup {
+    max-height: 360px;
+    overflow: scroll;
+}
+
+.token.boolean, .token.number {
+    color: $warning;
+}
+
+.token.keyword {
+    color: $success;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: $primary;
+}
+
+.token.punctuation {
+    color: $inverse-color;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: $info;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function {
+    color: $danger;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: $dark-grey;
+}
+
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+    color: $grey-dark;
+}
+
+/* end of prism */
+
+/*--- end of doc-styles ---*/
+
+
+
+/*--- file structure ---*/
+
+.doc-wrapper .file-structure-wrapper {
+    background: $white;
+    padding: 30px;
+    box-shadow: $shadow-sm;
+    border-radius: 10px;
+}
+
+.doc-wrapper .file-structure-wrapper .collapsed i.bi-folder-fill:before {
+    content: "\f3d1";
+}
+
+.doc-wrapper .file-structure-wrapper a:not(.collapsed) i.bi-folder-fill:before {
+    content: "\f3d7";
+}
+
+.doc-wrapper .file-structure-wrapper .folder-wrap {
+    position: relative;
+    font-size: 14px;
+    color: $title-color;
+}
+
+.doc-wrapper .file-structure-wrapper .folder-wrap i, .doc-wrapper .file-structure-wrapper .folders-list i {
+    position: relative;
+    font-size: 18px;
+    color: $primary-light;
+}
+
+.doc-wrapper .file-structure-wrapper .folder-wrap:before {
+    content: "\f282";
+    font-family: 'bootstrap-icons';
+    display: inline-block !important;
+    vertical-align: middle;
+    font-size: 10px;
+    color: $grey-dark;
+    position: relative;
+    top: -3px;
+    transition: all 0.2s ease-in-out;
+    transform: rotate(0deg);
+}
+
+.doc-wrapper .file-structure-wrapper .folder-wrap:not(.collapsed)::before {
+    transform: rotate(180deg);
+}
+
+.doc-wrapper .file-structure-wrapper .folder-text {
+    position: absolute;
+    left: 38px;
+    color: $title-color;
+}
+
+.doc-wrapper .file-structure-wrapper .sub-folders {
+    padding-left: 10px;
+}
+
+.doc-wrapper .file-structure-wrapper .file-structure-list.parent-level {
+    padding-left: 0;
+}
+
+.doc-wrapper .file-structure-wrapper .file-structure-list.first-level {
+    padding-left: 10px;
+}
+
+.doc-wrapper .file-structure-wrapper .file-structure-list.second-level {
+    padding-left: 20px;
+}
+
+.doc-wrapper .file-structure-wrapper .file-structure-list li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.doc-wrapper .file-structure-wrapper .file-structure-list i {
+    font-size: 14px;
+    margin-right: 3px;
+}
+
+.doc-wrapper .file-structure-wrapper .file-structure-list.parent-level li, .doc-wrapper .file-structure-wrapper .file-structure-list.parent-level i {
+    font-size: 14px;
+}
+
+.doc-wrapper .file-structure-wrapper .file-structure-list.parent-level i {
+    font-size: 18px;
+    line-height: 0;
+}
+
+/*--- end of file structure ---*/
+
+.doc-wrapper .features-list {
+    background-color: $white;
+    padding: 20px;
+    margin-bottom: 0;
+    border-radius: 10px;
+    box-shadow: $shadow-sm;
+}
+
+/*-------  end of general -------*/
+
+
+
+/*------- media screens -------*/
+
+
+@media only screen and (max-width: 991px) {
+.revert-order-tablet {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.doc-side-navbar {
+    left: -280px;
+    top: 74px !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.mobile-nav-active .doc-side-navbar {
+    left: 0;
+}
+
+.doc-side-navbar .sidenavbar-logo {
+    display: none;
+}
+
+.doc-side-navbar .navbar-collapse {
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.doc-wrapper .page-container .navbar {
+    left: 0;
+}
+
+.nav-doc .layout-switcher {
+    display: none;
+}
+
+.doc-wrapper .page-container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.nav-doc .mobile-nav-toggler {
+    margin-left: -5px;
+}
+
+.nav-doc .navbar-button .btn, .nav-doc .btn-icon {
+    margin-right: -10px;
+}
+}
+/*--- end of 991px ---*/
+
+
+
+
+@media only screen and (max-width: 767px) {
+.navbar-button .mode-label {
+    display: none !important;
+}
+
+.nav-doc .navbar-button .btn, .nav-doc .btn-icon {
+    padding: 0;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 0.75rem;
+    border-radius: $border-radius-xs;
+}
+
+.nav-doc .navbar-button .btn i {
+    margin: 0 !important;
+    margin-right: -2px !important;
+}
+
+.side-navbar {
+    left: -280px;
+    top: 74px !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.mobile-nav-active .side-navbar {
+    left: 0;
+}
+
+.side-navbar .sidenavbar-logo {
+    display: none;
+}
+
+.side-navbar .navbar-collapse {
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.doc-wrapper .page-container {
+    padding: 74px 0 0 0;
+}
+
+.doc-wrapper .page-container .navbar {
+    left: 0;
+}
+}
+/*--- end of 768px ---*/
+
+
+
+@media only screen and (max-width: 480px) {
+.nav-doc .nav-link, .nav-doc .nav-link.first-link {
+    padding: 0 10px !important;
+    margin: 0 !important;
+}
+
+.nav-doc .mobile-nav-toggler .nav-link.first-link {
+    padding-left: 0 !important;
+}
+
+.page-container .nav-doc .nav-link span {
+    display: none;
+}
+}
+/*--- end of 480px ---*/
+
+@media only screen and (min-width: 992px) {
+/* right-nav */
+.right-nav .doc-side-navbar {
+    left: auto;
+    right: 0;
+}
+
+.right-nav .doc-wrapper .page-container {
+    padding: 74px 280px 0 0
+}
+
+.right-nav .doc-wrapper .page-container .nav-doc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 280px;
+}
+
+.right-nav .nav-doc .navbar-button {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+.right-nav .page-content .row {
+    flex-direction: row-reverse;
+}
+
+.right-nav .on-page-sidebar {
+    margin-left: 0;
+    margin-right: 6px;
+}
+
+
+
+/* detached nav-left */
+
+.detached-nav-left .doc-side-navbar {
+    left: 30px;
+    top: 30px;
+    bottom: 30px;
+    border-radius: $border-radius;
+}
+
+.detached-nav-left .doc-wrapper .page-container {
+    padding-top: 104px;
+    padding-left: 310px;
+}
+
+.detached-nav-left .doc-wrapper .page-container .nav-doc {
+    top: 30px;
+    left: 340px;
+    right: 30px;
+    border-radius: $border-radius;
+    border: 1px solid $highlight;
+}
+
+.detached-nav-left .doc-wrapper .page-container .nav-doc:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background-color: $body-bg;
+}
+
+.detached-nav-left .sidenavbar-logo {
+    text-align: center;
+}
+
+.detached-nav-left .on-page-sidebar {
+    border: none;
+}
+
+.detached-nav-left .on-page-sidebar .sticky-top {
+    top: 134px !important;
+    border: 1px solid $highlight;
+    border-radius: $border-radius;
+}
+
+.detached-nav-left .on-page-sidebar .sticky-top .nav-item:last-child .nav-link {
+    border-bottom-left-radius: calc(0.5rem - 1px);
+    border-bottom-right-radius: calc(0.5rem - 1px);
+}
+
+.detached-nav-left .on-page-title {
+    padding: 1rem 1.5rem;
+}
+
+.detached-nav-left .doc-wrapper .page-container .page-title {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* detached nav-right */
+
+.detached-nav-right .doc-side-navbar {
+    left: auto;
+    right: 30px;
+    top: 30px;
+    bottom: 30px;
+    border-radius: $border-radius;
+}
+
+.detached-nav-right .doc-wrapper .page-container {
+    padding-top: 104px;
+    padding-right: 310px;
+    padding-left: 0;
+}
+
+.detached-nav-right .doc-wrapper .page-container .nav-doc {
+    top: 30px;
+    left: 30px;
+    right: 340px;
+    border-radius: $border-radius;
+    border: 1px solid $highlight;
+}
+
+.detached-nav-right .doc-wrapper .page-container .nav-doc:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background-color: $body-bg;
+}
+
+.detached-nav-right .sidenavbar-logo {
+    text-align: center;
+}
+
+.detached-nav-right .page-content .row {
+    flex-direction: row-reverse;
+}
+
+.detached-nav-right .on-page-sidebar {
+    margin-left: 0;
+    margin-right: 6px;
+    border: none;
+}
+
+.detached-nav-right .on-page-sidebar .sticky-top {
+    top: 134px !important;
+    border: 1px solid $highlight;
+    border-radius: $border-radius;
+}
+
+.detached-nav-right .on-page-sidebar .sticky-top .nav-item:last-child .nav-link {
+    border-bottom-left-radius: calc(0.5rem - 1px);
+    border-bottom-right-radius: calc(0.5rem - 1px);
+}
+
+.detached-nav-right .on-page-title {
+    padding: 1rem 1.5rem;
+}
+
+.detached-nav-right .nav-doc .navbar-button {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+.detached-nav-right .doc-wrapper .page-container .page-title {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+}
+/*--- end of 992px ---*/
+
+/*------- end of media screens -------*/
+
+
+/*------- dark mode documentation styles --------*/
+
+.dark-mode .doc-side-navbar {
+    background: $inverse-color !important;
+    border-right: 1px solid $highlight-white-dark;
+    box-shadow: none;
+}
+
+.dark-mode .nav-doc {
+    border-bottom: 1px solid $highlight-white-dark;
+}
+
+.dark-mode .doc-side-navbar .nav-link {
+    color: $grey;
+}
+
+.dark-mode .doc-side-navbar .sidenav-title, .dark-mode .doc-side-navbar .sidenav-sub-item.sub-title {
+    color: $dark-grey;
+}
+
+.dark-mode .doc-side-navbar.nav-inverse .nav-link.has-collapse:after {
+    color: $white;
+}
+
+.dark-mode .doc-side-navbar .nav-link.has-collapse, .dark-mode .doc-side-navbar.nav-inverse .nav-link.has-collapse:hover {
+    color: $white !important;
+    background-color: $primary;
+}
+
+.dark-mode .doc-side-navbar .nav-link.has-collapse.collapsed:hover:after {
+    color: $primary !important;
+}
+
+.dark-mode .doc-side-navbar .nav-link.has-collapse.collapsed {
+    color: $grey !important;
+    background-color: transparent;
+}
+
+.dark-mode .doc-side-navbar .nav-link.has-collapse.collapsed:hover {
+    color: $primary !important;
+    background-color: $primary-light;
+}
+
+.dark-mode .doc-side-navbar.nav-primary .nav-link.has-collapse, .dark-mode .doc-side-navbar.nav-primary .nav-link.has-collapse:hover {
+    color: $white !important;
+    background-color: $highlight-white-dark;
+}
+
+.dark-mode .doc-side-navbar .nav-link.sidenav-sub-item.active, .dark-mode .doc-side-navbar .nav-link.sidenav-sub-item.active:hover {
+    color: $white !important;
+    background-color: $highlight-white-dark;
+}
+
+.dark-mode .doc-side-navbar .nav-link.sidenav-sub-item:hover {
+    color: $grey !important;
+    background-color: $highlight-white;
+}
+
+.dark-mode .doc-side-navbar .nav-link.active, .dark-mode .doc-side-navbar .nav-link.has-collapse, .dark-mode .doc-side-navbar .nav-link.has-collapse.collapsed:hover, .dark-mode .doc-side-navbar .nav-link.has-collapse:after, .dark-mode .doc-side-navbar .nav-link.has-collapse:hover:after {
+    color: $white;
+    opacity: 1;
+}
+
+.dark-mode .doc-side-navbar .nav-link.has-collapse.collapsed:after {
+    color: $grey !important;
+}
+
+.dark-mode .doc-wrapper .features-list, .dark-mode .doc-wrapper .file-structure-wrapper {
+    background-color: $inverse-color;
+}
+
+.dark-mode .doc-wrapper .file-structure-wrapper .folder-text {
+    color: $grey;
+}
+
+.dark-mode .doc-wrapper .file-structure-wrapper .text-title {
+    color: $grey !important;
+}
+
+.dark-mode .doc-preview, .dark-mode .doc-info {
+    background-color: $black;
+}
+
+.dark-mode .doc-preview img {
+    border-color: $highlight-white;
+}
+
+.dark-mode .icon-item-inner .icon-wrapper {
+    background-color: $black;
+}
+
+.dark-mode .icon-item-inner .caption-sm, .dark-mode .icon-item-inner .icon-wrapper i {
+    color: $grey;
+}
+
+.dark-mode .icon-item-inner:hover .icon-wrapper {
+    background: $dark-grey;
+}
+
+.dark-mode .icon-item-inner:hover i {
+    color: $white;
+}
+
+.dark-mode .icon-item-inner:hover .caption-sm {
+    color: $white;
+}
+
+.dark-mode.right-nav .doc-side-navbar {
+    border-right: none;
+    border-left: 1px solid $highlight-white-dark;
+}
+
+.dark-mode .on-page-sidebar {
+    border-color: $highlight-white;
+}
+
+.dark-mode .on-page-title {
+    border-bottom-color: $highlight-white-dark;
+}
+
+.dark-mode.right-nav .on-page-sidebar, .dark-mode.detached-nav-right .on-page-sidebar .sticky-top, .dark-mode.detached-nav-left .on-page-sidebar .sticky-top {
+    border-color: $highlight-white-dark;
+}
+
+.dark-mode.detached-nav-left .doc-wrapper .nav-doc {
+    border: 1px solid $highlight-white-dark;
+}
+
+.dark-mode.detached-nav-left .doc-side-navbar, .dark-mode.detached-nav-right .doc-side-navbar, .dark-mode.detached-nav-right .doc-wrapper .page-container .nav-doc {
+    border: 1px solid $highlight-white-dark;
+}
+
+.dark-mode.detached-nav-left .doc-wrapper .page-container .nav-doc:before, .dark-mode.detached-nav-right .doc-wrapper .page-container .nav-doc:before {
+    background-color: $body-bg-dark;
+}
+
+/*------- end of dark mode general styles --------*/
+
+/*---------- end of documentation styles ----------*/

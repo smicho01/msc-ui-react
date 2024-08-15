@@ -1,0 +1,164 @@
+// Typography
+
+$title-font: 'Rubik', sans-serif;
+$primary-font: 'Rubik', sans-serif;
+$secondary-font: 'Rubik', sans-serif;
+$thin: 300;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 600;
+$lsp: 0.01rem;
+$lsp-2x: 0.02rem;
+$lsp-big: 0.05rem;
+$lsp-extra: 0.1rem;
+
+
+
+// Extras
+
+$input-height: 44px;
+$border-radius: 0.5rem;
+$border-radius-xs: 0.25rem;
+$border-radius-sm: 0.325rem;
+$border-radius-lg: 0.5rem;
+$border-radius-xl: 1rem;
+
+
+
+// General Colors
+
+$body-bg: #fafbfd;
+$body-bg-gradient: linear-gradient(-45deg, $body-bg 0%, #f7f9fa 100%);
+$body-bg-dark: #1f1f26;
+$body-bg-dark-gradient: linear-gradient(-45deg, $body-bg-dark 0%, #262832 100%);
+$light-grey: #f6f7fb;
+$light-grey-dark: #e4e5ea;
+$grey: #cdced4;
+$grey-dark: #a1a2a6;
+$grey-gradient: linear-gradient(-45deg, $light-grey-dark 0%, $grey 100%);
+$dark-grey: #64656b;
+$dark-grey-dark: #404145;
+$white: #fff;
+$white-gradient: linear-gradient(-45deg, $white 0%, $light-grey 100%);
+$black: #000;
+$black-gradient: linear-gradient(-45deg, $black 0%, $dark-grey-dark 100%);
+$inverse-color: #14151c;
+$title-color: #111724;
+$text-color: #7e838c;
+$dark: #2e2f36;
+$dark-gradient: linear-gradient(-45deg, $dark 0%, $dark-grey 100%);
+$highlight: rgba(0, 0, 0, 0.05);
+$highlight-dark: rgba(0, 0, 0, 0.15);
+$highlight-white: rgba(255, 255, 255, 0.1);
+$highlight-white-dark: rgba(255, 255, 255, 0.2);
+$highlight-gradient: linear-gradient(-45deg, $highlight-dark 0%, $highlight 100%);
+$highlight-white-gradient: linear-gradient(-45deg, $highlight-white-dark 0%, $highlight-white 100%);
+
+
+
+// Color Palette
+
+$primary-light: #c3d3f7;
+$primary: #0c4feb;
+$primary-dark: #0534a1;
+$primary-gradient: linear-gradient(-45deg, $primary 0%, #c7cafa 100%);
+
+$secondary-light: #e4e4ed;
+$secondary: #c2c3cd;
+$secondary-dark: #848796;
+$secondary-gradient: linear-gradient(-45deg, $secondary 0%, #c5d9e6 100%);
+
+$success-light: #cef0c0;
+$success: #69c246;
+$success-dark: #3d8f1d;
+$success-gradient: linear-gradient(-45deg, $success 0%, #87e8cb 100%);
+
+$info-light: #c7cafa;
+$info: #4f58db;
+$info-dark: #2e36a5;
+$info-gradient: linear-gradient(-45deg, $info 0%, #7fc0ff 100%);
+
+$warning-light: #f9e0b4;
+$warning: #ffb43b;
+$warning-dark: #de8c07;
+$warning-gradient: linear-gradient(-45deg, $warning 0%, #e6ed7b 100%);
+
+$danger-light: #ffcccc;
+$danger: #d72f2f;
+$danger-dark: #9c1010;
+$danger-gradient: linear-gradient(-45deg, $danger 0%, #f7ad7c 100%);
+
+
+
+// Transparent
+
+$primary-transparent: rgba(12, 79, 235, 0.75);
+$primary-transparent-50: rgba(12, 79, 235, 0.5);
+$primary-transparent-frosted: rgba(12, 79, 235, 0.9);
+$primary-transparent-frosted-dark: rgba(12, 79, 235, 0.98);
+
+$white-transparent: rgba(255, 255, 255, 0.75);
+$white-transparent-50: rgba(255, 255, 255, 0.5);
+$white-transparent-frosted: rgba(255, 255, 255, 0.9);
+$white-transparent-frosted-dark: rgba(255, 255, 255, 0.98);
+
+$black-transparent: rgba(0, 0, 0, 0.75);
+$black-transparent-50: rgba(0, 0, 0, 0.5);
+$black-transparent-frosted: rgba(0, 0, 0, 0.9);
+$black-transparent-frosted-dark: rgba(0, 0, 0, 0.98);
+
+$inverse-transparent: rgba(20, 21, 28, 0.75);
+$inverse-transparent-50: rgba(20, 21, 28, 0.5);
+$inverse-transparent-frosted: rgba(20, 21, 28, 0.87);
+$inverse-transparent-frosted-dark: rgba(20, 21, 28, 0.98);
+
+
+
+// Shadows
+
+$shadow-color: rgba(27, 26, 61, 0.025);
+$shadow-color-dark: rgba(27, 26, 61, 0.05);
+$shadow-color-darker: rgba(27, 26, 61, 0.1);
+$shadow-xs: 0px 1px 4px $shadow-color;
+$shadow-sm: 0px 2px 8px $shadow-color;
+$shadow: 0px 3px 12px $shadow-color;
+$shadow-lg: 0px 4px 16px $shadow-color-dark;
+$shadow-xl: 0px 6px 20px $shadow-color-dark;
+$btn-shadow-sm: 0px 2px 6px $shadow-color-dark;
+$btn-shadow-sm-dark: 0px 3px 10px $shadow-color-darker;
+$btn-shadow: 0px 3px 10px $shadow-color-dark;
+$btn-shadow-dark: 0px 6px 20px $shadow-color-darker;
+
+
+
+// Social Colors
+
+$facebook: #4e68a1;
+$facebook-dark: #3b4f7a;
+$twitter: #65b5f2;
+$twitter-dark: #5294c6;
+$linkedin: #2083bc;
+$linkedin-dark: #186592;
+$pinterest: #d2373b;
+$pinterest-dark: #ad2c2f;
+$dribbble: #ec5f94;
+$dribbble-dark: #b4446e;
+$instagram: #4c5fd7;
+$instagram-dark: #4252ba;
+$vimeo: #1ab7ea;
+$vimeo-dark: #0d91bc;
+$youtube: #e52d27;
+$youtube-dark: #b31217;
+$dropbox: #3d9ae8;
+$dropbox-dark: #2777bb;
+$behance: #053eff;
+$behance-dark: #062fbb;
+$skype: #00aff0;
+$skype-dark: #068bbd;
+$tumblr: #34526f;
+$tumblr-dark: #172635;
+$github: #333;
+$github-dark: #111;
+$reddit: #ff4500;
+$reddit-dark: #c13400;
