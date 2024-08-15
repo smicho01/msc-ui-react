@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApplicationContext } from "../../context/ApplicationContext";
+import {decodeJwt, decodeToken} from "../../utils/token";
 
 const Login = () => {
     const { isLoggedIn, setIsLoggedIn, token, setToken } = useApplicationContext(); // Assuming you have a setUser function to handle login state
@@ -41,6 +42,9 @@ const Login = () => {
 
             setToken(result.access_token)
             setIsLoggedIn(true)
+
+            const decodedJwt = decodeJwt(result.access_token)
+            console.log(decodedJwt)
 
         } catch (err) {
             setError(err.message);
@@ -97,9 +101,6 @@ const Login = () => {
                         </div>
                     </form>
                 </div>
-
-                {token}
-
             </div>
         </>
     );

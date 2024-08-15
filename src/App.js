@@ -1,19 +1,17 @@
 import { ApplicationProvider } from './context/ApplicationContext';
-import { Routes, Route, BrowserRouter, Link } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from "./components/pages/Home";
 import Questions from "./components/pages/Questions";
 import Sidebar from "./components/layout/Sidebar";
 import ModeSwitcher from "./components/layout/ModeSwitcher";
 import UserAccount from "./components/pages/UserAccount";
 import UserQuestions from "./components/pages/UserQuestions";
-import PrivateRoute from "./components/utils/ProtectedRoute";
 import ProtectedRoute from "./components/utils/ProtectedRoute";
 import Login from "./components/pages/Login";
+import LayoutsSelector from "./components/layout/LayoutsSelector";
 
 
 function App() {
-
-
 
   return (
       <ApplicationProvider>
@@ -45,6 +43,7 @@ function App() {
                   {/*<!-- page-container -->*/}
               </div>
               {/*<!-- / main-wrapper -->*/}
+              <LayoutsSelector />
           </BrowserRouter>
       </ApplicationProvider>
   );

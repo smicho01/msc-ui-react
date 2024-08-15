@@ -3,11 +3,14 @@ import {Link} from "react-router-dom";
 
 const ModeSwitcher = () => {
 
-    const {userId} = useApplicationContext();
-
     const modeSwitcher = () => {
         var element = document.getElementById("mode-switch");
         element.classList.toggle("dark-mode");
+    }
+
+    const  navMobile = ()  => {
+        var element = document.getElementById("mode-switch");
+        element.classList.toggle("mobile-nav-active");
     }
 
     return (
@@ -15,7 +18,7 @@ const ModeSwitcher = () => {
             <nav className="navbar nav-doc navbar-light bg-white">
                 <div className="container-fluid">
 
-                    <button onClick="navMobile()" type="button" className="navbar-toggler mobile-nav-toggler">
+                    <button onClick={navMobile} type="button" className="navbar-toggler mobile-nav-toggler">
                         <span className="nav-link main-nav-link first-link">
                             <i className="bi-list fs-28 va-middle"></i>
                         </span>{/*<!-- / nav-link -->*/}
