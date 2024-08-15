@@ -6,9 +6,10 @@ import Sidebar from "./components/layout/Sidebar";
 import ModeSwitcher from "./components/layout/ModeSwitcher";
 import UserAccount from "./components/pages/UserAccount";
 import UserQuestions from "./components/pages/UserQuestions";
-import ProtectedRoute from "./components/utils/ProtectedRoute";
+import ProtectedRoute from "./utils/ProtectedRoute";
 import Login from "./components/pages/Login";
 import LayoutsSelector from "./components/layout/LayoutsSelector";
+import Logout from "./components/pages/Logout";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
                                           <Route path="/user-questions"
                                               element={<ProtectedRoute element={<UserQuestions />} />}/>
                                           <Route path="/login" element={<Login />} />
+                                          <Route path="/logout" element={<Logout />} />
                                       </Routes>
                                   </div>
                               </div>

@@ -1,4 +1,4 @@
-import {useState, useContext, createContext, useEffect} from 'react';
+import {useState, useContext, createContext} from 'react';
 import PropTypes from 'prop-types';
 
 export const ApplicationContext = createContext();
@@ -12,17 +12,15 @@ export const ApplicationProvider = ({ children }) => {
     const [userId, setUserId] = useState();
     const [isLoggedIn, setIsLoggedIn] = useState(false)
     const [token, setToken] = useState('');
+    const [user, setUser] = useState({})
 
     const value = {
         serviceError, setServiceError,
         userId, setUserId,
         isLoggedIn, setIsLoggedIn,
-        token, setToken
+        token, setToken,
+        user, setUser
     };
-
-    // useEffect(() => {
-    //     setUserId("userid-abc-123")
-    // }, []);
 
     return (
         <ApplicationContext.Provider value={value}>

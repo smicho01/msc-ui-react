@@ -1,10 +1,5 @@
 import {jwtDecode} from "jwt-decode";
 
-/**
- * Decode a JWT token
- * @param {string} token - JWT token to decode
- * @returns {object|null} - Decoded payload or null if decoding fails
- */
 export const decodeJwt = (token) => {
     try {
         // Decode token
@@ -15,3 +10,13 @@ export const decodeJwt = (token) => {
         return null;
     }
 };
+
+export const processDecodedToken = (decodedToken) => {
+    return {
+        college: decodedToken.college,
+        email: decodedToken.email,
+        name: decodedToken.name,
+        username: decodedToken.preferred_username,
+        roles: decodedToken.realm_access.roles
+    }
+}

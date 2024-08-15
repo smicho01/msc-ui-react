@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
-import { useApplicationContext } from "../../context/ApplicationContext";
-import {decodeJwt, decodeToken} from "../../utils/token";
+import React, {useState} from 'react';
+import {useApplicationContext} from "../../context/ApplicationContext";
+import {decodeJwt, processDecodedToken} from "../../utils/token";
+import {useNavigate} from "react-router-dom";
+import {UrlSearchParamBuilder} from "../../utils/UrlSearchParamBuilder";
+import {findUser} from "../app/user/userService";
 
 const Login = () => {
-    const { isLoggedIn, setIsLoggedIn, token, setToken } = useApplicationContext(); // Assuming you have a setUser function to handle login state
+    const { setIsLoggedIn, setToken, setUser } = useApplicationContext(); // Assuming you have a setUser function to handle login state
     const [username, setUsername] = useState('smicho01');
     const [password, setPassword] = useState('password123');
     const [error, setError] = useState('');
 
-
+    const navigate = useNavigate();
 
     const processForm = async (event) => {
         event.preventDefault(); // Prevent the default form submission
@@ -27,7 +30,7 @@ const Login = () => {
 
         try {
             // Make API call to authenticate user
-            const response = await fetch('http://sever3d.synology.me:7080/auth/realms/academichain/protocol/openid-connect/token', {
+            const response = await fetch(process.env.REACT_APP_KEYCLOAK_URL, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -40,11 +43,28 @@ const Login = () => {
             }
             const result = await response.json();
 
-            setToken(result.access_token)
-            setIsLoggedIn(true)
+            if(result.access_token && result.access_token !== '') {
+                setToken(result.access_token)
+                const decodedJwt = decodeJwt(result.access_token)
+                //console.log(decodedJwt)
+                const decodedUserData = processDecodedToken(decodedJwt)
+                //console.log(decodedUserData)
 
-            const decodedJwt = decodeJwt(result.access_token)
-            console.log(decodedJwt)
+                try {
+                    const getUserParams = new UrlSearchParamBuilder()
+                        .setField('username').setValue(decodedUserData.username).getUrlSearchParams();
+                    const getUserResponse = await findUser(getUserParams, result.access_token);
+                    if (getUserResponse.status === 200) {
+                        console.log(getUserResponse.data)
+                        setIsLoggedIn(true) // Set actual variable
+                        setUser(getUserResponse.data)
+                    }
+                } catch (err) {
+
+                }
+
+                navigate("/user-account")
+            }
 
         } catch (err) {
             setError(err.message);

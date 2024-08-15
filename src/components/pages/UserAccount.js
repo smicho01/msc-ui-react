@@ -1,14 +1,15 @@
 import {useApplicationContext} from "../../context/ApplicationContext";
-import AlertWarning from "../alerts/AlertWarnng";
 
 const UserAccount = () => {
 
-    const { userId } = useApplicationContext();
+    const { isLoggedIn } = useApplicationContext();
 
     return (
         <>
             <h4 className="page-title">User Account</h4>
-            {userId}
+            {
+                isLoggedIn ? <div>User logged in </div> : <div>Not logged in</div>
+            }
         </>
     );
 };

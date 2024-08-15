@@ -1,7 +1,8 @@
 import {useApplicationContext} from "../../context/ApplicationContext";
-import {Link} from "react-router-dom";
 
 const ModeSwitcher = () => {
+
+    const { isLoggedIn, user } = useApplicationContext();
 
     const modeSwitcher = () => {
         var element = document.getElementById("mode-switch");
@@ -24,6 +25,10 @@ const ModeSwitcher = () => {
                         </span>{/*<!-- / nav-link -->*/}
                     </button>
                     {/*<!-- / navbar-toggler -->*/}
+
+                    {
+                        isLoggedIn && <div>Logged in as <b>{user.visibleUsername}</b></div>
+                    }
 
                     <ul className="list-inline navbar-button p-0 m-0 ml-auto">
                         <li className="nav-item">
